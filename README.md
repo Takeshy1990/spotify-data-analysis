@@ -1,52 +1,109 @@
-# Spotify Data Analysis
+# 🎵 Spotify Data Analysis
 
-## Overview
-Ανάλυση δεδομένων από Spotify με στόχο την κατανόηση patterns στα χαρακτηριστικά των τραγουδιών.
+## 📖 Overview
+Αυτό το project κάνει **ανάλυση δεδομένων Spotify** με Python.  
+Περιλαμβάνει **EDA**, **K-Means clustering**, **SQL integration**, και **visualizations**.  
+Στόχος: να ανακαλύψουμε patterns στα χαρακτηριστικά τραγουδιών και να εντοπίσουμε clusters με παρόμοιο προφίλ.
 
 ---
 
-## Methodology
+## ⚙️ Features
+- Data Cleaning (duplicates, missing values)
+- Exploratory Data Analysis (EDA)
+  - Correlation heatmap
+  - Scatterplot (Danceability vs Popularity)
+- K-Means clustering
+  - Αυτόματη επιλογή του βέλτιστου `k` (silhouette score)
+  - PCA 2D visualization
+  - Αυτόματη ονοματοδοσία clusters (*High-Energy Dance*, *Chill Mellow*, *Upbeat Pop* κλπ.)
+- Export αποτελεσμάτων
+  - `cluster_profile.csv` → mean features ανά cluster
+  - `spotify_with_clusters.csv` → dataset με labels
+- Database Integration
+  - Αποθήκευση σε SQLite (`spotify_analysis.db`)
+  - Παραδείγματα SQL queries (tracks per cluster, top artists by popularity)
 
-### 1. EDA
-- Καθαρισμός και διερεύνηση.
-- Correlation heatmap:
+---
 
+## 📊 Exploratory Data Analysis (EDA)
+
+### 🔹 Correlation Heatmap
 ![Correlation Heatmap](images/correlations.png)
 
-- Scatter plot (Danceability vs Popularity):
+### 🔹 Danceability vs Popularity
+![Danceability vs Popularity](images/dance_vs_pop.png)
 
-![Dance vs Popularity](images/dance_vs_pop.png)
+---
 
-### 2. Clustering
-- Επιλογή **k** με βάση silhouette score.
-- Απεικόνιση clusters σε 2D μέσω PCA:
+## 🤖 Clustering (K-Means)
+
+Εφαρμόστηκε **K-Means clustering** με επιλογή του βέλτιστου αριθμού clusters μέσω silhouette score.  
+Παράδειγμα αποτελέσματος σε 2D PCA projection:
 
 ![Clusters PCA](images/clusters_pca.png)
 
-### 3. Results
-- `cluster_profile.csv`: μέσες τιμές χαρακτηριστικών ανά cluster.
-- `spotify_with_clusters.csv`: πλήρες dataset με cluster label.
-- SQLite database `spotify_analysis.db` + SQL queries.
+---
 
-### 4. Usage
-```bash
-python spotify_analysis.py
-Project Structure
-kotlin
-Αντιγραφή κώδικα
-/
+## 📂 Project Structure
+spotify-data-analysis/
+│
 ├── data/
-│   └── spotify.csv
+│ └── spotify.csv
+│
 ├── images/
-│   ├── correlations.png
-│   ├── dance_vs_pop.png
-│   └── clusters_pca.png
+│ ├── correlations.png
+│ ├── dance_vs_pop.png
+│ └── clusters_pca.png
+│
 ├── spotify_analysis.py
-├── README.md
-Next Steps
-Πειραματισμός με dashboards (Plotly / Dash).
+├── cluster_profile.csv
+├── spotify_with_clusters.csv
+├── spotify_analysis.db
+└── README.md
 
-Ανάλυση predictive modeling (hit prediction).
+yaml
+Αντιγραφή κώδικα
 
-Shared reporting σε HTML/PDF.
+---
 
+## ▶️ How to Run
+1. Κάνε clone το repo:
+   ```bash
+   git clone https://github.com/YourUsername/spotify-data-analysis.git
+   cd spotify-data-analysis
+Εγκατέστησε dependencies:
+
+bash
+Αντιγραφή κώδικα
+pip install pandas numpy matplotlib seaborn scikit-learn
+Τρέξε το script:
+
+bash
+Αντιγραφή κώδικα
+python spotify_analysis.py
+📊 Example SQL Queries
+sql
+Αντιγραφή κώδικα
+-- Πλήθος τραγουδιών ανά cluster
+SELECT cluster_name, COUNT(*) as n_tracks
+FROM spotify_clusters
+GROUP BY cluster_name;
+
+-- Top 5 καλλιτέχνες ανά μέσο popularity
+SELECT artist, AVG(popularity) as avg_pop
+FROM spotify_clusters
+GROUP BY artist
+ORDER BY avg_pop DESC
+LIMIT 5;
+🚀 Next Steps
+Interactive dashboard (Plotly/Dash ή Power BI)
+
+Predictive modeling (π.χ. hit prediction με βάση popularity)
+
+Αυτόματο report σε HTML/PDF για παρουσίαση σε stakeholders
+
+👤 Author
+📌 Project by Takeshy1990 (Data Analyst in progress).
+
+yaml
+Αντιγραφή κώδικα
