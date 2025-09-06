@@ -15,7 +15,7 @@
 - K-Means clustering
   - Αυτόματη επιλογή του βέλτιστου `k` (silhouette score)
   - PCA 2D visualization
-  - Αυτόματη ονοματοδοσία clusters (*High-Energy Dance*, *Chill Mellow*, *Upbeat Pop* κλπ.)
+  - Αυτόματη ονοματοδοσία clusters (*High-Energy Dance*, *Chill Mellow*, *Upbeat Pop* κ.ά.)
 - Export αποτελεσμάτων
   - `cluster_profile.csv` → mean features ανά cluster
   - `spotify_with_clusters.csv` → dataset με labels
@@ -67,9 +67,10 @@ yaml
 ---
 
 ## ▶️ How to Run
+
 1. Κάνε clone το repo:
    ```bash
-   git clone https://github.com/YourUsername/spotify-data-analysis.git
+   git clone https://github.com/Takeshy1990/spotify-data-analysis.git
    cd spotify-data-analysis
 Εγκατέστησε dependencies:
 
@@ -102,8 +103,5 @@ Predictive modeling (π.χ. hit prediction με βάση popularity)
 
 Αυτόματο report σε HTML/PDF για παρουσίαση σε stakeholders
 
-👤 Author
-📌 Project by Takeshy1990 (Data Analyst in progress).
 
-yaml
-Αντιγραφή κώδικα
+
