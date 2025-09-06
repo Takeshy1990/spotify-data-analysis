@@ -1,87 +1,52 @@
-# 🎵 Spotify Dataset Analysis
+# Spotify Data Analysis
 
-## 📖 Overview
-This project performs **Exploratory Data Analysis (EDA)**, **clustering**, and **SQL integration** on a Spotify dataset.  
-It is designed as a **mid-level data analyst portfolio project**, showcasing skills in data cleaning, visualization, machine learning, and database management.
-
----
-
-## ⚙️ Features
-- Data cleaning (duplicates, missing values)
-- Exploratory Data Analysis (EDA)
-  - Correlation heatmap
-  - Scatterplots (Danceability vs Popularity)
-- K-Means clustering
-  - Automatic selection of optimal `k` via silhouette score
-  - PCA 2D visualization of clusters
-  - Automatic cluster naming (e.g., *High-Energy Dance*, *Chill Mellow*)
-- Export results
-  - `cluster_profile.csv`: mean features per cluster
-  - `spotify_with_clusters.csv`: full dataset with cluster labels
-- Database integration
-  - Results stored in SQLite (`spotify_analysis.db`)
-  - Example SQL queries (tracks per cluster, top artists by popularity)
+## Overview
+Ανάλυση δεδομένων από Spotify με στόχο την κατανόηση patterns στα χαρακτηριστικά των τραγουδιών.
 
 ---
 
-## 📂 Project Structure
-spotify.ai/
-│
-├── spotify.csv # Input dataset
-├── spotify_analysis.py # Main Python script
-│
-├── correlations.png # Correlation heatmap
-├── dance_vs_pop.png # Scatterplot (if popularity column exists)
-├── clusters_pca.png # PCA visualization of clusters
-│
-├── cluster_profile.csv # Summary of clusters
-├── spotify_with_clusters.csv # Labeled dataset
-├── spotify_analysis.db # SQLite database with results
+## Methodology
 
-yaml
-Αντιγραφή κώδικα
+### 1. EDA
+- Καθαρισμός και διερεύνηση.
+- Correlation heatmap:
 
----
+![Correlation Heatmap](images/correlations.png)
 
-## 🛠️ Tech Stack
-- **Python** (pandas, numpy, matplotlib, seaborn, scikit-learn)
-- **SQLite** (sqlalchemy, sqlite3)
-- **Environment**: Anaconda + Notepad++ (or Jupyter/VSCode)
+- Scatter plot (Danceability vs Popularity):
 
----
+![Dance vs Popularity](images/dance_vs_pop.png)
 
-## ▶️ How to Run
-1. Clone or download the project folder.
-2. Install required packages:
-   ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn
-Run the script:
+### 2. Clustering
+- Επιλογή **k** με βάση silhouette score.
+- Απεικόνιση clusters σε 2D μέσω PCA:
 
-bash
-Αντιγραφή κώδικα
-cd path/to/spotify.ai
+![Clusters PCA](images/clusters_pca.png)
+
+### 3. Results
+- `cluster_profile.csv`: μέσες τιμές χαρακτηριστικών ανά cluster.
+- `spotify_with_clusters.csv`: πλήρες dataset με cluster label.
+- SQLite database `spotify_analysis.db` + SQL queries.
+
+### 4. Usage
+```bash
 python spotify_analysis.py
-Results will be generated in the same folder.
+Project Structure
+kotlin
+Αντιγραφή κώδικα
+/
+├── data/
+│   └── spotify.csv
+├── images/
+│   ├── correlations.png
+│   ├── dance_vs_pop.png
+│   └── clusters_pca.png
+├── spotify_analysis.py
+├── README.md
+Next Steps
+Πειραματισμός με dashboards (Plotly / Dash).
 
-📊 Example Insights
-Cluster analysis identifies segments such as:
+Ανάλυση predictive modeling (hit prediction).
 
-High-Energy Dance: Tracks with high energy and danceability.
-
-Chill Mellow: Low tempo & low energy acoustic tracks.
-
-Upbeat Pop: High valence & danceability.
-
-SQL queries allow quick business-style questions, e.g.:
-
-“How many tracks belong to each cluster?”
-
-“Which artists have the highest average popularity?”
-
-🚀 Next Steps
-Add a dashboard (Plotly/Dash or Power BI) for interactive exploration.
-
-Extend analysis with predictive models (e.g., hit prediction).
-
-Automate HTML/PDF reporting for stakeholders.
+Shared reporting σε HTML/PDF.
 
