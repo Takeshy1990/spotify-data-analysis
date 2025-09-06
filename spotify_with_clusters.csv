@@ -1,0 +1,11 @@
+track_name,artist,year,popularity,danceability,energy,valence,tempo,cluster,cluster_name
+Blinding Lights,The Weeknd,2019,95,0.73,0.8,0.72,171.0,0,Moody / Low Energy
+Shape of You,Ed Sheeran,2017,92,0.82,0.65,0.93,96.0,1,Mixed / Balanced
+Someone Like You,Adele,2011,85,0.54,0.33,0.18,135.0,0,Moody / Low Energy
+Uptown Funk,Mark Ronson,2014,89,0.84,0.9,0.75,115.0,1,Mixed / Balanced
+Believer,Imagine Dragons,2017,90,0.7,0.87,0.54,125.0,1,Mixed / Balanced
+Dance Monkey,Tones and I,2019,91,0.83,0.59,0.62,98.0,1,Mixed / Balanced
+Humble,Kendrick Lamar,2017,88,0.63,0.73,0.38,150.0,0,Moody / Low Energy
+Bad Guy,Billie Eilish,2019,93,0.7,0.44,0.56,135.0,0,Moody / Low Energy
+Rolling in the Deep,Adele,2010,87,0.7,0.8,0.52,105.0,1,Mixed / Balanced
+Despacito,Luis Fonsi,2017,94,0.81,0.75,0.85,89.0,1,Mixed / Balanced

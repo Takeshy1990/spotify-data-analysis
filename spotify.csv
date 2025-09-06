@@ -1,0 +1,11 @@
+track_name,artist,year,danceability,energy,valence,tempo,popularity
+Blinding Lights,The Weeknd,2019,0.73,0.80,0.72,171.0,95
+Shape of You,Ed Sheeran,2017,0.82,0.65,0.93,96.0,92
+Someone Like You,Adele,2011,0.54,0.33,0.18,135.0,85
+Uptown Funk,Mark Ronson,2014,0.84,0.90,0.75,115.0,89
+Believer,Imagine Dragons,2017,0.70,0.87,0.54,125.0,90
+Dance Monkey,Tones and I,2019,0.83,0.59,0.62,98.0,91
+Humble,Kendrick Lamar,2017,0.63,0.73,0.38,150.0,88
+Bad Guy,Billie Eilish,2019,0.70,0.44,0.56,135.0,93
+Rolling in the Deep,Adele,2010,0.70,0.80,0.52,105.0,87
+Despacito,Luis Fonsi,2017,0.81,0.75,0.85,89.0,94
